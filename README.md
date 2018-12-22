@@ -45,6 +45,15 @@ PROPAGATION_NESTED：
 </pre>
 
 <pre>
+回滚类型：
+
+      1）rollbackFor：一组异常类的实例，遇到时必须进行回滚
+      2）rollbackForClassname：一组异常类的名字，遇到时必须进行回滚
+      3）noRollbackFor：一组异常类的实例，遇到时必须不回滚
+      5）noRollbackForClassname：一组异常类的名字，遇到时必须不回滚
+</pre>
+
+<pre>
 Spring事务回滚策略
       spring的事务管理默认只对出现运行期异常(Java.lang.RuntimeException及其子类)进行回滚
 
