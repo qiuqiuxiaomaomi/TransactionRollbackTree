@@ -62,4 +62,9 @@ Spring事务回滚策略
           @Transaction(noRollbackFor=RuntimeException.class)  
           @Transaction(RollbackFor=Exception.class)  
 这样就改变了默认的事务处理方式。
+
+例子：
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED, rollbackFor = Exception.class)
+    public synchronized int addAuthToRoles(List<UcRoleAuth> list, List<Integer> ids) {
 </pre>
